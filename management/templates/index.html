@@ -1,0 +1,32 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<nav>
+    <a href="{% url 'logout' %}">Logout</a>
+</nav>
+
+<p></p>
+
+<h1>Welcome to the Hospital Management Referral System</h1>
+
+<p>Use the navigation to view information.</p>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="{% url 'patient_list' %}">Patients</a></li>
+            <li><a href="{% url 'doctor_list' %}">Doctors</a></li>
+            <li><a href="{% url 'hospital_list' %}">Hospitals</a></li>
+            <li><a href="{% url 'referral_list' %}">Referrals</a></li>
+            <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+{% endblock %}

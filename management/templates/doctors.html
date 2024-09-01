@@ -1,0 +1,21 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Doctors{% endblock %}
+
+{% block content %}
+
+<nav>
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'patient_list' %}">Patients</a>
+    <a href="{% url 'hospital_list' %}">Hospitals</a>
+    <a href="{% url 'referral_list' %}">Referrals</a>
+    <a href="{% url 'appointment_list' %}">Appointments</a>
+</nav>
+
+<h1>Doctors</h1>
+<ul>
+    {% for doctor in doctors %}
+    <li><b>ID:</b>{{ doctor.medicalid}} - <b>Name:</b> {{ doctor.fname }} - <b>Specialization</b> {{ doctor.specialization }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
