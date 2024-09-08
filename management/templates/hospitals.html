@@ -4,18 +4,25 @@
 
 {% block content %}
 
+<h2>
+    <nav>
+        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+</h2>
+    
+
 <nav>
-    <a href="{% url 'logout' %}">Logout</a>
     <a href="{% url 'patient_list' %}">Patients</a>
     <a href="{% url 'doctor_list' %}">Doctors</a>
     <a href="{% url 'referral_list' %}">Referrals</a>
     <a href="{% url 'appointment_list' %}">Appointments</a>
 </nav>
 
-<h1>Hospitals</h1>
+<h1><b>Hospitals</b></h1>
 <ul>
     {% for hospital in hospitals %}
-    <li>{{ hospital.hospitalname }} - {{ hospital.address }}</li>
+    <li>{{ hospital.hospitalname }} - {{ hospital.address }} - {{ hospital.contactno }}</li>
     {% endfor %}
 </ul>
 {% endblock %}

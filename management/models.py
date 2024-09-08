@@ -14,7 +14,7 @@ class Appointment(models.Model):
     referralid = models.ForeignKey('Referral', models.DO_NOTHING, db_column='ReferralID')  # Field name made lowercase.
     appointmentdate = models.DateTimeField(db_column='AppointmentDate')  # Field name made lowercase.
     status = models.CharField(db_column='Status', max_length=9, blank=True, null=True)  # Field name made lowercase.
-    notes = models.TextField(db_column='Notes', blank=True, null=True)  # Field name made lowercase.
+    notes = models.TextField(db_column='Notes', blank=True, null=True)  # Field name made lowercase
 
     class Meta:
         managed = False

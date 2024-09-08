@@ -4,6 +4,15 @@
 
 {% block content %}
 
+<h2>
+    <nav>
+        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+    </h2>
+    
+
+
 <nav>
     <a href="{% url 'logout' %}">Logout</a>
     <a href="{% url 'patient_list' %}">Patients</a>
@@ -12,10 +21,10 @@
     <a href="{% url 'appointment_list' %}">Appointments</a>
 </nav>
 
-<h1>Referral</h1>
+<h1><b>Referral</b></h1>
 <ul>
     {% for referral in referrals %}
-    <li><b>ID:</b> {{ referral.referralid }} <b>From:</b> {{ referral.referrerid }} <b>To</b> {{ referral.referredid }} <b>Date:</b> {{ referral.referraldate }} <b>Status:</b> {{ referral.referralstatus }}</li>
+    <li><b>ID:</b> {{ referral.referralid }} - <b>From:</b> {{ referral.referrerid }} <b>To</b> {{ referral.referredid }} - <b>Patient ID:</b> {{ referral.patientid }} - <b>Date:</b> {{ referral.referraldate }} - <b>Status:</b> {{ referral.referralstatus }}</li>
     {% endfor %}
 </ul>
 {% endblock %}

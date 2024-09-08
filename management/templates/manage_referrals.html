@@ -1,0 +1,44 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Manage Referrals{% endblock %}
+
+{% block content %}
+
+<html>
+
+<body>
+
+    <h2>
+        <nav>
+            <a href="{% url 'logout' %}">Logout</a>
+            <a href="{% url 'home' %}">Home</a>
+        </nav>
+    </h2>
+
+    <h3>
+        <nav>
+            <div>
+                <ul>
+                    <a href="{% url 'manage_appointments' %}">Manage Appointments</a>    
+                    <a href="{% url 'manage_doctors' %}">Manage Doctors</a>
+                    <a href="{% url 'manage_hospitals' %}">Manage Hospitals</a>
+                    <a href="{% url 'manage_patients' %}">Manage Patients</a>
+                    <a href="{% url 'manage_referred' %}">Referred</a>
+                    <a href="{% url 'manage_referrer' %}">Referrer</a>
+                </ul>
+            </div>
+        </nav>
+    </h3>
+        
+    <h1><b>Manage Referrals</b></h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Referrals</button>
+    </form>
+
+</body>
+</html>
+
+{% endblock %}

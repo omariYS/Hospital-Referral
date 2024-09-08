@@ -1,0 +1,36 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Add Records{% endblock %}
+
+{% block content %}
+
+
+<p>Use the navigation to Add Records</p>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="{% url 'manage_patients' %}">Patients</a></li>
+            <li><a href="{% url 'manage_doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'manage_hospitals' %}">Hospitals</a></li>
+            <li><a href="{% url 'manage_referrals' %}">Referrals</a></li>
+            <li><a href="{% url 'manage_appointments' %}">Appointments</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li> 
+            <li><a href="{% url 'manage_referred' %}">Referred</a></li>
+            <li><a href="{% url 'manage_referrer' %}">Referrer</a></li> 
+        </ul>
+    </div>
+</nav>
+
+
+
+{% endblock %}
+
+<!-- <li><a href="{% url 'patient_list' %}">Patients</a></li>
+<li><a href="{% url 'doctor_list' %}">Doctors</a></li>
+<li><a href="{% url 'hospital_list' %}">Hospitals</a></li>
+<li><a href="{% url 'referral_list' %}">Referrals</a></li>
+<li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+<li><a href="{% url 'register' %}">Register</a></li> -->
+
+<!-- -->
